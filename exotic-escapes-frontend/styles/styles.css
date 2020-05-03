@@ -1,0 +1,12 @@
+#box {
+    background: repeating-linear-gradient(orange , black 20%);
+    height: 50px;
+    left: 150px;
+    position: absolute;
+    top: 10px;
+    width: 50px;
+}
+body{
+    background-image: url("https://static1.squarespace.com/static/55da760de4b016f1f052ce50/55fff2e4e4b031e03bb812b2/5cdb8578e4966b9daaf7e080/1561229653381/the-1865639_960_720.jpg?format=1500w")
+
+}

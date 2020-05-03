@@ -1,7 +1,7 @@
 let createJoeExotic = function() {
     //establish dopston
     let joeExotic = document.createElement('img')
-    joeExotic.src = "assets/dompston.jpg"
+    joeExotic.src = "assets/tiger.png"
     joeExotic.style.position = "absolute"
 
     joeExotic.style.width = "100px"

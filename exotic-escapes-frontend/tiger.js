@@ -1,14 +1,25 @@
 let createTiger = function(){
-        //create a tiger and append him to the page
+    //figure out why relationship of tiger.tiger_movement doesn't work?
+    //consider if there needs to be a second fetch request
+        //create a tiger from the API database 
+        //visit http://localhost3000/tiger_movements to test things
+        fetch('http://localhost:3000/tigers')
+            .then(function(response){
+                return response.json()
+            })
+            .then(function(tigers){
+                console.log(tigers)
+                tigers.forEach( dbTiger => { 
+            console.log(dbTiger.tiger_movement)
         let tiger = document.createElement('img')
-        tiger.src = "assets/tiger.png"
-            tiger.style.position = "absolute"
+        tiger.src = dbTiger.img_url
+        tiger.style.position = "absolute"
         //size
         tiger.style.width = "100px"
         tiger.style.height = "100px"
         //position(away from left, away from top)
-        tiger.style.left = "500px"
-        tiger.style.top = "300px"
+        tiger.style.left = `${dbTiger.x}px`
+        tiger.style.top = `${dbTiger.y}px`
     
         document.body.append(tiger)
      //movement/direction (does not yet inlcude direction for sprite)
@@ -73,10 +84,12 @@ let createTiger = function(){
                     walkAround()
                 })
             
-        }
+            }
+             walkAround()
+        })
+    })
     
         
-        walkAround()
 }
 // const walkAround = async function(){
 //     while(true) {   

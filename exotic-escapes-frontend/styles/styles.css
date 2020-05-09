@@ -10,3 +10,16 @@ body{
     background-image: url("https://static1.squarespace.com/static/55da760de4b016f1f052ce50/55fff2e4e4b031e03bb812b2/5cdb8578e4966b9daaf7e080/1561229653381/the-1865639_960_720.jpg?format=1500w")
 
 }
+/* Tiger Related Styles */
+.tiger-button{
+    font-size: 45px;
+    height: 175px;
+    width: 175px;
+    border-radius: 25px 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: orange;
+    text-shadow: 2px 2px black;
+    background-image: linear-gradient(orange, black, white, orange, black, white);
+    border: 4px dotted green;
+
+}

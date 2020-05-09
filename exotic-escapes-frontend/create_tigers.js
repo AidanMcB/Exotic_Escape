@@ -1,4 +1,4 @@
-let createTiger = function(){
+let createTigers = function(){
     //figure out why relationship of tiger.tiger_movement doesn't work?
     //consider if there needs to be a second fetch request
         //create a tiger from the API database 
@@ -8,7 +8,6 @@ let createTiger = function(){
                 return response.json()
             })
             .then(function(tigers){
-                console.log(tigers)
                 tigers.forEach( dbTiger => { 
             console.log(dbTiger.tiger_movement)
         let tiger = document.createElement('img')

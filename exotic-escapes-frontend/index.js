@@ -1,2 +1,2 @@
 createZooKeeper()
-createTiger()
+bringInTheTigers()

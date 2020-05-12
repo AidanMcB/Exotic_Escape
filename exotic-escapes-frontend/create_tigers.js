@@ -1,22 +1,22 @@
 let createTigers = function(){
     //figure out why relationship of tiger.tiger_movement doesn't work?
     //consider if there needs to be a second fetch request
-        //create a tiger from the API database 
-        //visit http://localhost3000/tiger_movements to test things
-        fetch('http://localhost:3000/tigers')
-            .then(function(response){
-                return response.json()
-            })
-            .then(function(tigers){
-                tigers.forEach( dbTiger => { 
+    //create a tiger from the API database 
+    //visit http://localhost3000/tiger_movements to test things
+    fetch('http://localhost:3000/tigers')
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(tigers){
+        tigers.forEach( dbTiger => { 
             console.log(dbTiger.tiger_movement)
         let tiger = document.createElement('img')
         tiger.src = dbTiger.img_url
         tiger.style.position = "absolute"
-        //size
+            //size
         tiger.style.width = "100px"
         tiger.style.height = "100px"
-        //position(away from left, away from top)
+            //position(away from left, away from top)
         tiger.style.left = `${dbTiger.x}px`
         tiger.style.top = `${dbTiger.y}px`
     
@@ -84,11 +84,11 @@ let createTigers = function(){
                 })
             
             }
-             walkAround()
-        })
+            walkAround()
+            })
     })
     
-        
+    
 }
 // const walkAround = async function(){
 //     while(true) {   

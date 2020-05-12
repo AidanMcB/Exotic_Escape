@@ -1,6 +1,6 @@
+let zooKeeper = document.createElement('img')
 let createZooKeeper = function() {
     //create a movable zooKeeper character
-    let zooKeeper = document.createElement('img')
     zooKeeper.src = "assets/zookeeper.png"
     zooKeeper.style.position = "absolute"
     //size
@@ -9,11 +9,11 @@ let createZooKeeper = function() {
     //position(f=away from left, away from top)
     zooKeeper.style.left = "300px"
     zooKeeper.style.top = "300px"
-
+    
     document.body.append(zooKeeper)
     //movement/direction (does not yet inlcude direction for sprite)
     let direction = null
-
+    
     let move = function () {
         if (direction == 'left') {
             zooKeeper.style.left = parseFloat(zooKeeper.style.left) - 0.5 + 'px'
